@@ -32,7 +32,7 @@
   font-style: normal;
 }
 
-*{
+body{
     background-color: #5B2386;
     
 
@@ -48,6 +48,7 @@ section{
     align-items: center;
     margin-top: 120px;
     padding-bottom: 68px;
+    position: relative;
 }
 
 header {
@@ -157,7 +158,78 @@ header p{
     font-size: 72px;
     font-weight: 700;
 }
+.main_3-btn{
+    margin-top: 120px;
+    
+}
 
+.main_3-btn button{
+    font-family: 'GMarketSans', 'sans serif';
+    font-size: 24px;
+    font-weight: 700;
+}
+.main_3-btn button:first-child{
+    width: 364px;
+    height: 64px;
+    background-color: #FCEE21;
+    color: #5B2386;
+    border: none;
+    border-radius: 12px;
+}
+.main_3-btn button:nth-child(2){
+    width: 192px;
+    height: 64px;
+    color: #5B2386;
+    border: none;
+    border-radius: 12px;
+    background-color: #fff;
+}
+.pop-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    width: 800px;
+    height: 800px;
+    padding: 82px 0;
+    position: absolute;
+    left: 9999px;
+    
+}
+.pop-up_innerbox{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #5B2386;
+}
+.pop-up .pop-up_innerbox p{
+    font-family: 'JoyfulStory', 'sans serif';
+
+}
+.pop-up .pop-up_innerbox p:nth-child(1){
+   font-size: 96px;
+   margin-bottom: 4px;
+}
+.pop-up .pop-up_innerbox p:nth-child(2){
+   font-size: 36px;
+   font-weight: 400;
+}
+.pop-up_innerbox button{
+    width: 508px;
+    height: 64px;
+    background-color: #FCEE21;
+    color: #5B2386;
+    font-family: 'GMarketSans', 'sans serif';
+    font-weight: 700;
+    font-size: 24px;
+    border-radius: 12px;
+
+}
+.pop-up .pop-up_innerbox img{
+    margin: 40px 0;
+}
 footer{
     display: flex;
     flex-direction: column;
