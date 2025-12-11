@@ -31,214 +31,394 @@
   font-weight: 300;
   font-style: normal;
 }
-
+html{
+    font-size: 10px;
+}
+:root{
+    --main-color:#5B2386;
+    --sub-color:#FCEE21;
+    --text-color:#fff;
+}
 body{
+    margin: 0;
+    padding: 0;
     background-color: #5B2386;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.4rem;
+    font-family: 'GMarketSans','sans serif';
     
 
 }
+
+
 img{
     box-sizing: border-box;
     display: block;
 }
+.main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+/*--------------mobile version----------------- */
+@media (max-width:767px) {
+     body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 767px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 32px;
+    }
+    header img{
+        width: 278px;
+        height: 130px;
+        margin-bottom: 32px;
+    }
+     header p{
+        font-family: 'JoyfulStory', 'sans serif';
+        font-size: 2.2rem;
+        color: var(--sub-color);
+     }
+     section{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 60px;
+        line-height: normal;
+     }
+     section img{
+        width: 20px;
+        align-items: center;
+        height: 18px;
+     }
+     /* 이미지 텍스트랑 가운데 정렬 안맞음------------------- */
+     section strong{
+        font-weight: 700;
+     }
+     form{
+        text-align: center;
+        line-height: normal;
+        margin: 0 20px;
+        position: relative;
+       
+     }
+     form input{
+        width: 156px;
+        height: 38px;
+        line-height: 38px;
+        border: none;
+        border-radius: 8px;
+     }
+     form input::placeholder{
+        text-align: center;
+        font-size: 1.4rem;
+        
+     }
+     form button{
+        width: 240px;
+        height: 72px;
+        background-color: var(--sub-color);
+        color: var(--main-color);
+        font-family: 'GMarketSans','sans serif';
+        font-size: 1.4rem;
+        font-weight: 700;
+        border-radius: 12px;
+        margin-top: 60px;
+        margin-bottom: 68px;
+     }
+    
+     form img{
+        width: 44px;
+        height: 48px;
+        position: absolute;
+        bottom: 40px;
+        right: 0px;
+     }
+     .result1, .result2{
+        font-size: 1.2rem;
+        font-weight: 300;
+     }
+    :is(.result1, .result2) strong{
+        font-weight: 700;
+        font-size: 24px;
+        margin: 0 12px;
+    }
+    .btn{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 60px
+        
 
-section{
+    }
+    .btn button{
+        font-family: 'GMarketSans','sans serif';
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--main-color);
+        margin-top: 52px;
+    }
+    .btn button:nth-child(1){
+        width: 204px;
+        height: 48px;
+        background-color: var(--sub-color);
+        border-radius: 12px;
+        margin-right: 8px;
+    }
+    .btn button:nth-child(2){
+        width: 102px;
+        height: 48px;
+        background-color: #fff;
+        border-radius: 12px;
+        
+    }
+    .modal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 320px;
+        height: 500px;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+        display: none;
+    }
+    .modal p{
+        color: var(--main-color);
+        font-family: 'JoyfulStory', 'sans serif';
+        font-size: 36px;
+    }
+    .modal p:nth-child(1){
+        font-size: 64px;
+    }
+    .modal img{
+        width: 240px;
+        height: 188px;
+        margin-top: 38px;
+    }
+    .modal button{
+        width: 250px;
+        height: 72px;
+        background-color: var(--sub-color);
+        border-radius: 12px;
+        color: var(--main-color);
+        font-family: 'GMarketSans','sans serif';
+        font-size: 1.4rem;
+        font-weight: 700;
+        /* padding: 50px 20px; */
+        
+
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 300;
+        margin-bottom: 48px;
+    }
+    footer img{
+        width: 128px;
+        height: 28px;
+        margin-bottom: 12px;
+    }
+}
+
+
+@media(min-width:800px) {
+    header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 120px;
-    padding-bottom: 68px;
-    position: relative;
+    margin: 120px 0;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header p{
+    header p{
     font-family: 'JoyfulStory', 'sans serif';
     color: #F5DF4D;
     font-size: 3.6rem;
-    margin-bottom: 120px;
     margin-top: 52px;
-}
+    }
+    section{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 120px;
+        line-height: normal;
+        font-size: 1.8rem;
+     }
+     section img{
+        width: 36px;
+        align-items: center;
+        height: 32px;
+     }
+     /* 이미지 텍스트랑 가운데 정렬 안맞음------------------- */
+     section strong{
+        font-weight: 700;
+        font-size: 2.4rem;
+     }
+    form{
+        text-align: center;
+        line-height: normal;
+        font-size: 2.4rem;
+        position: relative;
+       
+     }
+     form input{
+        width: 228px;
+        height: 56px;
+        border: none;
+        border-radius: 8px;
+     }
+     form input::placeholder{
+        text-align: center;
+        font-size: 2.4rem;
+        
+     }
+     form p:nth-child(1){
+        margin-bottom: 20px;
+     }
+     form button{
+        width: 568px;
+        height: 64px;
+        background-color: var(--sub-color);
+        color: var(--main-color);
+        font-family: 'GMarketSans','sans serif';
+        font-size: 2.4rem;
+        font-weight: 700;
+        border-radius: 12px;
+        margin-top: 60px;
+        margin: 120px 0;
+     }
+    
+     form img{
+        width: 64px;
+        height: 72px;
+        position: absolute;
+        top: 190px;
+        right: 34px;
+     }
+     .result1, .result2{
+        font-size: 2.4rem;
+        font-weight: 300;
+     }
+    :is(.result1, .result2) strong{
+        font-weight: 700;
+        font-size: 72px;
+        margin: 0 12px;
+    }
+    .btn{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 120px
+        
 
-.main_1{
-    display: flex;
-    gap: 20px;
-    text-align: center;
-    font-family: 'GMarketSans', 'sans serif';
+    }
+    .btn button{
+        font-family: 'GMarketSans','sans serif';
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: var(--main-color);
+        margin-top: 52px;
+    }
+    .btn button:nth-child(1){
+        width: 364px;
+        height: 64px;
+        background-color: var(--sub-color);
+        border-radius: 12px;
+        margin-right: 12px;
+    }
+    .btn button:nth-child(2){
+        width: 192px;
+        height: 64px;
+        background-color: #fff;
+        border-radius: 12px;
+        
+    }
+    .modal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 320px;
+        height: 500px;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+        display: none;
+    }
+
+    .modal{
+       display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        width: 800px;
+        height: 800px;
+        padding: 82px 0;
+        color: var(--main-color);
+        position: absolute;
+        left: 9999px;
+    }
+    .modal p{
+        font-family: 'JoyfulStory', 'sans serif';
+
+    }
+    .modal p:nth-child(1){
+    font-size: 9.6rem;
+    margin-bottom: 4px;
+    }
+    .modal p:nth-child(2){
+    font-size: 3.6rem;
     font-weight: 400;
-    font-size: 1.8rem;
-    color: #fff;
-    align-items: center;
-    margin-bottom: 120px;
-}
+    }
+    .modal button{
+        width: 508px;
+        height: 64px;
+        background-color: #FCEE21;
+        color: #5B2386;
+        font-family: 'GMarketSans', 'sans serif';
+        font-weight: 700;
+        font-size: 2.4rem;
+        border-radius: 12px;
 
-.main_1 img{
-    width: 36px;
-    height: 32px;
-    
-}
-.main_1 strong{
-    font-size: 2.4rem;
-    font-weight: 700;
-}
-.main_1 p{
-    line-height: normal;
-}
-
-.main_2{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    font-family: 'GMarketSans', 'sans serif';
-    font-weight: 400;
-    font-size: 1.8rem;
-    color: #fff;
-    align-items: center;
-    margin-bottom: 120px;
-    position: relative;
-}
-
-.main_2 input{
-    width: 228px;
-    height: 56px;
-    line-height: 100%;
-    background-color: #fff;
-    border: none;
-    border-radius: 8px;
-    text-align: center;
-    font-family: 'GMarketSans', 'sans serif';
-    font-weight: 400;
-    font-size: 24px;
-    
-}
-.main_2 form p:nth-child(1){
-    margin-bottom: 20px;
-}
-.main_2 p input::placeholder{
-    color: #BABCBE;
-}
-
-.main_2 button{
-    width: 568px;
-    height: 64px;
-    background-color: #FCEE21;
-    color: #5B2386;
-    border-radius: 12px;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: 'GMarketSans', 'sans serif';
-    margin-top: 120px;
-}
-
-.main_2 img{
-    position: absolute;
-    top: 210px;
-    right: 74px;
-    width: 64px;
-    height: 72px;
+    }
+    .modal img{
+        margin: 40px 0;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        font-size: 1.2rem;
+        margin-bottom: 68px;
+    }
+    footer img{
+        margin-bottom: 20px;
+    }
 
 }
-/* main_3 */
 
-.main_3{
-    font-family: 'GMarketSans', 'sans serif';
-    font-size: 24px;
-    color: #fff;
-    text-align: center;
-    
-}
-
-.main_3 strong{
-    font-size: 72px;
-    font-weight: 700;
-}
-.main_3-btn{
-    margin-top: 120px;
-    
-}
-
-.main_3-btn button{
-    font-family: 'GMarketSans', 'sans serif';
-    font-size: 24px;
-    font-weight: 700;
-}
-.main_3-btn button:first-child{
-    width: 364px;
-    height: 64px;
-    background-color: #FCEE21;
-    color: #5B2386;
-    border: none;
-    border-radius: 12px;
-}
-.main_3-btn button:nth-child(2){
-    width: 192px;
-    height: 64px;
-    color: #5B2386;
-    border: none;
-    border-radius: 12px;
-    background-color: #fff;
-}
-.pop-up{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    width: 800px;
-    height: 800px;
-    padding: 82px 0;
-    position: absolute;
-    left: 9999px;
-    
-}
-.pop-up_innerbox{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: #5B2386;
-}
-.pop-up .pop-up_innerbox p{
-    font-family: 'JoyfulStory', 'sans serif';
-
-}
-.pop-up .pop-up_innerbox p:nth-child(1){
-   font-size: 96px;
-   margin-bottom: 4px;
-}
-.pop-up .pop-up_innerbox p:nth-child(2){
-   font-size: 36px;
-   font-weight: 400;
-}
-.pop-up_innerbox button{
-    width: 508px;
-    height: 64px;
-    background-color: #FCEE21;
-    color: #5B2386;
-    font-family: 'GMarketSans', 'sans serif';
-    font-weight: 700;
-    font-size: 24px;
-    border-radius: 12px;
-
-}
-.pop-up .pop-up_innerbox img{
-    margin: 40px 0;
-}
-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 120px;
-}
-footer img{
-    margin-bottom: 25px;
-}
