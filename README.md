@@ -29,4 +29,11 @@ HTML5의 시멘틱 태그를 사용하여 구조적으로 마크업을 구현했
 }
 ```
 
-## 3. CSS 클래스 네이밍 : 케밥 케이스(kebab-case) 적용
+## 3. 웹 접근성을 고려한 HTML, CSS
+sr-only 클래스명을 이용하여 HTML에 있어서 스크린 리더기에 인식은 되지만 보이지 않게 만들었습니다.
+```CSS
+.sc-only{
+    position: absolute;
+    left: 9999px;
+}
+```
