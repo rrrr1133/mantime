@@ -40,6 +40,10 @@ html{
     --text-color:#fff;
     --placeholder-color:#BABCBE;
 }
+.sr-only{
+    position: absolute;
+    left: 9999px;
+}
 body{
     margin: 0;
     padding: 0;
@@ -127,6 +131,7 @@ img{
         line-height: 38px;
         border: none;
         border-radius: 8px;
+        margin-bottom: 12px;
      }
      form input::placeholder{
         text-align: center;
@@ -191,7 +196,7 @@ img{
         border-radius: 12px;
         
     }
-    .modal{
+    dialog{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -200,23 +205,25 @@ img{
         background-color: #fff;
         padding: 40px;
         border-radius: 20px;
-        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
-        display: none;
+        border: none;
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 15%);
+        position: absolute;
+        left: 999999px;
     }
-    .modal p{
+    dialog p{
         color: var(--main-color);
         font-family: 'JoyfulStory', 'sans serif';
         font-size: 36px;
     }
-    .modal p:nth-child(1){
+    dialog p:nth-child(1){
         font-size: 64px;
     }
-    .modal img{
+    dialog img{
         width: 240px;
         height: 188px;
         margin-top: 38px;
     }
-    .modal button{
+    dialog button{
         width: 250px;
         height: 72px;
         background-color: var(--sub-color);
@@ -225,7 +232,7 @@ img{
         font-family: 'GMarketSans','sans serif';
         font-size: 1.4rem;
         font-weight: 700;
-        /* padding: 50px 20px; */
+
         
 
     }
@@ -246,7 +253,7 @@ img{
 }
 
 
-@media(min-width:800px) {
+@media(min-width:768px) {
     header {
     display: flex;
     flex-direction: column;
@@ -363,25 +370,13 @@ img{
         border-radius: 12px;
         
     }
-    .modal{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 320px;
-        height: 500px;
-        background-color: #fff;
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
-        display: none;
-    }
 
-    .modal{
+    dialog{
        display: flex;
         flex-direction: column;
         align-items: center;
         background-color: #fff;
-        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 15%);
         border-radius: 20px;
         width: 800px;
         height: 800px;
@@ -390,19 +385,19 @@ img{
         position: absolute;
         left: 9999px;
     }
-    .modal p{
+    dialog p{
         font-family: 'JoyfulStory', 'sans serif';
 
     }
-    .modal p:nth-child(1){
+    dialog p:nth-child(1){
     font-size: 9.6rem;
     margin-bottom: 4px;
     }
-    .modal p:nth-child(2){
+    dialog p:nth-child(2){
     font-size: 3.6rem;
     font-weight: 400;
     }
-    .modal button{
+    dialog button{
         width: 508px;
         height: 64px;
         background-color: #FCEE21;
@@ -413,7 +408,7 @@ img{
         border-radius: 12px;
 
     }
-    .modal img{
+    dialog img{
         margin: 40px 0;
     }
     footer{
